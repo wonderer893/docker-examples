@@ -54,7 +54,7 @@ services:
         SXA_IMAGE: ${SITECORE_MODULE_REGISTRY}sitecore-sxa-xm1-assets:${SXA_VERSION}
 
   id:
-    image: ${REGISTRY}${COMPOSE_PROJECT_NAME}-id:${VERSION:-latest}
+    image: ${REGISTRY}${COMPOSE_PROJECT_NAME}-id:${VERSION:-$BUILD_NUMBER}
     build:
       context: ./docker/build/id
       args:
